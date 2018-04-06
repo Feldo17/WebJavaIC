@@ -1,8 +1,11 @@
 pipeline {
   agent any
+  parameters{
+    string(name: 'JDK_HOME', defaultValue:'Java8', description:'Version du JDK ?')
+  }
   tools { 
         maven 'M3' 
-        jdk 'Java8' 
+        jdk '${params.JDK_HOME}' 
     }
   stages {
     stage('Preparation') {
