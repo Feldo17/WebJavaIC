@@ -29,7 +29,7 @@ pipeline {
             }
       steps {
         echo 'Construction'
-        echo 'Build sur' ${ENVT}
+        echo 'Build '
       }
     }
     stage('Resultat') {
