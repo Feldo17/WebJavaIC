@@ -5,7 +5,12 @@ pipeline {
       parallel {
         stage('Preparation') {
           steps {
-            sh 'mvn -Dmaven.test.failure.ignore clean site:site'
+            if (isUnix()) {
+              sh 'mvn -Dmaven.test.failure.ignore clean site:site'
+            } else {
+              bat(/mvn -Dmaven.test.failure.ignore clean site:site/)
+            }
+            
           }
         }
         stage('Dodo') {
