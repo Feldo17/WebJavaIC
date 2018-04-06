@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Dodo') {
           steps {
-            sleep 40
+            sleep 10
           }
         }
       }
