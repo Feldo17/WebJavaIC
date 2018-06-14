@@ -25,9 +25,9 @@ pipeline {
         sh 'echo "shell script"'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
-        junit 'unit.xml'
+        junit '\'target/surefire-reports/*.xml\''
       }
     }
   }
