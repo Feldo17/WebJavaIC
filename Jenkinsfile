@@ -22,7 +22,8 @@ pipeline {
     }
     stage('suiv1') {
       steps {
-        sh 'echo "shell script"'
+        sh 'mvn -B -DskipTests clean package'
+        sh 'mvn test'
       }
     }
     stage('error') {
