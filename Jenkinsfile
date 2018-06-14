@@ -25,6 +25,11 @@ pipeline {
         sh 'echo "shell script"'
       }
     }
+    stage('') {
+      steps {
+        junit 'unit.xml'
+      }
+    }
   }
   environment {
     ENV1 = 'formation Serge'
