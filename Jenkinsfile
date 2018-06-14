@@ -8,20 +8,25 @@ pipeline {
             echo 'Setup du job'
           }
         }
-        stage('') {
+        stage('Sleep1') {
           steps {
             sleep 3
           }
         }
       }
     }
-    stage('') {
+    stage('Print1') {
       steps {
         echo 'en cours'
       }
     }
+    stage('suiv1') {
+      steps {
+        sh 'echo "shell script"'
+      }
+    }
   }
   environment {
-    ENV1 = 'formation'
+    ENV1 = 'formation Serge'
   }
 }
