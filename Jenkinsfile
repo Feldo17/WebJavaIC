@@ -24,14 +24,13 @@ pipeline {
       }
     }
     stage('suiv1') {
-      steps {
-        sh 'mvn -B -DskipTests clean package'
+      steps (
         sh 'mvn test'
       }
     }
     stage('error') {
       steps {
-        junit '\'target/surefire-reports/*.xml\''
+        junit '**/test-reports/*.xml'
       }
     }
   }
