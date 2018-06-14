@@ -24,7 +24,7 @@ pipeline {
       }
     }
     stage('suiv1') {
-      steps (
+      steps {
         sh 'mvn test'
       }
     }
