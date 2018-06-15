@@ -85,16 +85,16 @@
 					<goal>check</goal>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>3.0.3</version>
 				<configuration>
 					<xmlOutput>true</xmlOutput>
-					<!-- Optional directory to put findbugs xdoc xml report -->
+					Optional directory to put findbugs xdoc xml report
 					<xmlOutputDirectory>target/site</xmlOutputDirectory>
 				</configuration>
-			</plugin>
+			</plugin> -->
 			<!-- JXR pour les CROSS-REFERENCES -->
 			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-jxr-plugin</artifactId> 
 				<version>2.3</version> </plugin> -->		<!-- rapport des TODO -->
