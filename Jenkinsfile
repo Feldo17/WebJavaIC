@@ -20,7 +20,7 @@ pipeline {
         sh 'mvn clean package'
       }
     }
-    stage('Package') {
+    stage('Tests') {
       steps {
         sh 'mvn test'
         junit '**/test-reports/*.xml'
