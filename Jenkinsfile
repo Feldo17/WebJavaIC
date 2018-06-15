@@ -8,16 +8,22 @@ pipeline {
             echo 'Setup du job'
           }
         }
-        stage('') {
+        stage('Dodo') {
           steps {
             sleep 3
           }
         }
       }
     }
-    stage('') {
+    stage('Package') {
       steps {
-        echo 'en cours'
+        sh 'mvn clean package'
+      }
+    }
+    stage('Package') {
+      steps {
+        sh 'mvn test'
+        junit '**/test-reports/*.xml'
       }
     }
   }
